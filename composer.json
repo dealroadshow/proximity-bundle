@@ -1,0 +1,27 @@
+{
+    "name": "dealroadshow/proximity-bundle",
+    "description": "Create PHP proxy objects easily with dealroadshow/proximity library in Symfony project",
+    "type": "library",
+    "require": {
+        "php": ">=8.2",
+        "dealroadshow/proximity": "dev-main",
+        "symfony/framework-bundle": "^6.2",
+        "symfony/http-kernel": "^6.2",
+        "symfony/dependency-injection": "^6.2",
+        "symfony/config": "^6.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dealroadshow\\Bundle\\ProximityBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "petr-buchyn",
+            "email": "petr.buchyn@finsight.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

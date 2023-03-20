@@ -1,0 +1,13 @@
+parameters:
+    'dealroadshow_proximity.proxy_classes_dir': '%env(DEALROADSHOW_PROXIMITY_PROXY_CLASSES_DIR)%'
+    'dealroadshow_proximity.proxy_namespace': '%env(DEALROADSHOW_PROXIMITY_PROXY_NAMESPACE)%'
+    'env(DEALROADSHOW_PROXIMITY_PROXY_CLASSES_DIR)': '%kernel.project_dir%/var/proxy'
+    'env(DEALROADSHOW_PROXIMITY_PROXY_NAMESPACE)': 'Dealroadshow\Proximity\Proxy'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Dealroadshow\Proximity\ProxyGenerator: ~
+    Dealroadshow\Proximity\ProxyFactory: ~
