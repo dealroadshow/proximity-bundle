@@ -9,5 +9,9 @@ services:
         autowire: true
         autoconfigure: true
 
-    Dealroadshow\Proximity\ProxyGenerator: ~
-    Dealroadshow\Proximity\ProxyFactory: ~
+    Dealroadshow\Proximity\ProxyGenerator:
+        arguments:
+            $proxyClassesNamespace: '%dealroadshow_proximity.proxy_namespace%'
+    Dealroadshow\Proximity\ProxyFactory:
+        arguments:
+            $proxyClassesDirectory: '%dealroadshow_proximity.proxy_classes_dir%'
