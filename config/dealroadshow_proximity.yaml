@@ -9,9 +9,16 @@ services:
         autowire: true
         autoconfigure: true
 
+    Dealroadshow\Proximity\ProxyFactory: ~
+
+    Dealroadshow\Proximity\ProxyStrategy\EvaluatingStrategy: ~
+
+    Dealroadshow\Proximity\ProxyStrategy\SaveToFileStrategy:
+        arguments:
+            $proxyClassesDirectory: '%dealroadshow_proximity.proxy_classes_dir%'
+
+    Dealroadshow\Proximity\ProxyStrategy\ProxyStrategyInterface: '@Dealroadshow\Proximity\ProxyStrategy\EvaluatingStrategy'
+
     Dealroadshow\Proximity\ProxyGenerator:
         arguments:
             $proxyClassesNamespace: '%dealroadshow_proximity.proxy_namespace%'
-    Dealroadshow\Proximity\ProxyFactory:
-        arguments:
-            $proxyClassesDirectory: '%dealroadshow_proximity.proxy_classes_dir%'

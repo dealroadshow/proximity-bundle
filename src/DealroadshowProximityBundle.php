@@ -21,7 +21,7 @@ class DealroadshowProximityBundle extends AbstractBundle
     {
         parent::build($container);
 
-        $container->addCompilerPass(new InterceptorsPass());
+        $container->addCompilerPass(pass: new InterceptorsPass(), priority: 500);
     }
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
