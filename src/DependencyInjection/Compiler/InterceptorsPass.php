@@ -13,7 +13,7 @@ class InterceptorsPass implements CompilerPassInterface
     public const RESULT_INTERCEPTOR_TAG = 'dealroadshow_proximity.interceptor.result';
 
 
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $container
             ->registerForAutoconfiguration(BodyInterceptorInterface::class)
